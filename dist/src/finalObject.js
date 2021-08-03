@@ -180,7 +180,7 @@ function newMesh() {
         this.fontc_v,
         this.topc
       );
-      console.log(mesh);
+      // console.log(mesh);
       mesh.rotation.x -= Math.PI / 2;
     } else {
       if (this.Texture == true) {
@@ -287,7 +287,7 @@ function newMesh() {
     temp_mesh.rotation.z = mesh.rotation._z;
     mesh = temp_mesh.clone();
 
-    if (this.Geometry != 11){
+    if (this.Geometry != 11) {
       mesh.material.color.setHex(this.color);
 
       mesh.receiveShadow = false;
@@ -481,11 +481,11 @@ function newAnimation() {
   this.temp = 0.005;
   this.beta = 90;
   this.alpha = 1;
-  this.scale=meshObject.scale;
+  this.scale = meshObject.scale;
   this.runAnimation = function () {
     if (this.turnOnAnima) {
-        // animaGUI();
-        renderer.setAnimationLoop(() => {
+      // animaGUI();
+      renderer.setAnimationLoop(() => {
         renderer.render(scene, camera);
         orbit.update();
         this.meshRotation();
@@ -508,7 +508,7 @@ function newAnimation() {
   this.circleRotation = function () {
     if (this.rotationCircle) {
       mesh.position.x = Math.sin(this.theta) * this.radius;
-      mesh.position.z = this.alpha*Math.cos(this.theta) * this.radius;
+      mesh.position.z = this.alpha * Math.cos(this.theta) * this.radius;
       // mesh.position.y = 1/Math.tan(this.theta)*this.radius;
       mesh.position.y += this.cR;
       if (mesh.position.y > this.maxHeight || mesh.position.y < 0) {

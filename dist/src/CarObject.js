@@ -3,7 +3,7 @@ function getCarFrontTexture(fontc_w, fontc_v) {
   canvas.width = 384; // 64
   canvas.height = 192; // 32
   const context = canvas.getContext("2d");
-  console.log(fontc_v);
+  // console.log(fontc_v);
   context.fillStyle = fontc_v; // Màu viền
   context.fillRect(0, 0, 384, 192); // context.fillRect(0, 0, 64, 32);
 
@@ -46,9 +46,8 @@ function Wheel(wheelc) {
 function Car(material, wheelc, bodyc, sidec_w, sidec_v, fontc_w, fontc_v, topc) {
   const car = new THREE.Group();
 
-  if (material == 1)
-  {}
-  
+  if (material == 1) { }
+
   const main = new THREE.Mesh(
     new THREE.BoxBufferGeometry(360, 180, 90), // 60, 30, 15
     new THREE.MeshLambertMaterial({ color: bodyc })
@@ -58,7 +57,7 @@ function Car(material, wheelc, bodyc, sidec_w, sidec_v, fontc_w, fontc_v, topc) 
   main.castShadow = true;
   main.receiveShadow = true;
   car.add(main);
-  
+
   const carFrontTexture = getCarFrontTexture(fontc_w, fontc_v);
   carFrontTexture.center = new THREE.Vector2(0.5, 0.5);
   carFrontTexture.rotation = Math.PI / 2;
