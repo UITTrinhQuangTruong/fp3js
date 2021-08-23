@@ -10,4 +10,5 @@ B4: Chạy Live Server trên VS Code.
 # Link Demo:
 https://drive.google.com/drive/folders/1RXxfBvF--nVB0jizWIO0i6CbtTBYY3I4?usp=sharing
 
-# Link GitHub:
+# Link GitHub Page:
+https://uittrinhquangtruong.github.io/fp3js/
